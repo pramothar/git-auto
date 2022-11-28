@@ -28,7 +28,7 @@ include 'backend/database.php';
 					</div>
 					<div class="col-sm-6">
 						<a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New User</span></a>
-						<a href="JavaScript:void(0);" class="btn btn-danger" id="delate_multiple"><i class="material-icons">&#xE15C;</i> <span>delate</span></a>						
+						<a href="JavaScript:void(0);" class="btn btn-danger" id="delete_multiple"><i class="material-icons">&#xE15C;</i> <span>delete</span></a>						
 					</div>
                 </div>
             </div>
@@ -78,8 +78,8 @@ include 'backend/database.php';
 							data-city="<?php echo $row["city"]; ?>"
 							title="Edit">&#xE254;</i>
 						</a>
-						<a href="#delateEmployeeModal" class="delate" data-id="<?php echo $row["id"]; ?>" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" 
-						 title="delate">&#xE872;</i></a>
+						<a href="#deleteEmployeeModal" class="delete" data-id="<?php echo $row["id"]; ?>" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" 
+						 title="delete">&#xE872;</i></a>
                     </td>
 				</tr>
 				<?php
@@ -164,24 +164,24 @@ include 'backend/database.php';
 			</div>
 		</div>
 	</div>
-	<!-- delate Modal HTML -->
-	<div id="delateEmployeeModal" class="modal fade">
+	<!-- delete Modal HTML -->
+	<div id="deleteEmployeeModal" class="modal fade">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<form>
 						
 					<div class="modal-header">						
-						<h4 class="modal-title">delate User</h4>
+						<h4 class="modal-title">delete User</h4>
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					</div>
 					<div class="modal-body">
 						<input type="hidden" id="id_d" name="id" class="form-control">					
-						<p>Are you sure you want to delate these Records?</p>
+						<p>Are you sure you want to delete these Records?</p>
 						<p class="text-warning"><small>This action cannot be undone.</small></p>
 					</div>
 					<div class="modal-footer">
 						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-						<button type="button" class="btn btn-danger" id="delate">delate</button>
+						<button type="button" class="btn btn-danger" id="delete">delete</button>
 					</div>
 				</form>
 			</div>
