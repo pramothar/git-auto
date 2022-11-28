@@ -1,5 +1,5 @@
 <?php
-include 'backend/database.php';
+include_once 'backend/database.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
