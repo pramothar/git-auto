@@ -8,4 +8,4 @@ RUN apt-get update && apt-get install -y \
 RUN docker-php-ext-install mysqli pdo pdo_mysql && docker-php-ext-enable pdo_mysql
 RUN apt-get install -y ffmpeg
 COPY . /var/www/html
-EXPOSE 8081
+EXPOSE 80
